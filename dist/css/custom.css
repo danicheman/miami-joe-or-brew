@@ -74,7 +74,7 @@ div#preload { display: none; }
     position: absolute;
     height: 250px;
     width: 300px;
-    left: 15px;
-    top: 185px;
+    right: 15px;
+    opacity: 0.7;
     z-index: 10;
 }
