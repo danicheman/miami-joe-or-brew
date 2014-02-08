@@ -20,7 +20,7 @@ function initialize(lat,lng) {
 }
 
 function movePoint(hopLat, hopLng) {
-    if (typeof map == undefined) {
+    if (map == undefined) {
         initialize(hopLat,hopLng);
         return;
     }
