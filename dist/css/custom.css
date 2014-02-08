@@ -35,6 +35,15 @@ div#preload { display: none; }
 .jumbotron {
     position: relative;
 }
+
+#winner {
+
+height:400px;
+ background-color:#ffffff;
+position:fixed;
+    
+}
+
 #explosion{
     position:absolute;
     bottom: 30px;
