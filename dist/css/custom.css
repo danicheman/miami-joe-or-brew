@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 #gameBoard h1 {
-    font-size: 4em;
+    font-size: 3.5em;
 }
 #gameBoard h2 {
     font-size: 1.5em;
@@ -74,6 +74,7 @@ div#preload { display: none; }
     position: absolute;
     height: 250px;
     width: 300px;
-    right: 15px;
+    left: 15px;
+    top: 185px;
     z-index: 10;
 }

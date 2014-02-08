@@ -33,8 +33,8 @@
 
     <aside class="score-board">
         <div class="title">Brew Score</div>
-        <div class="correct">Correct: <span id="score_correct">0/10</span></div>
-        <div class="lives">Incorrect: <span id="score_lives">3/3</span></div>
+        <div class="correct">Points: <span id="score_correct">0</span></div>
+        <div class="lives">Lives: <span id="score_lives">3/3</span></div>
     </aside>
 
     <article class="versus-row">

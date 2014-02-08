@@ -95,7 +95,7 @@ game.indicateFailure = function(beverage_type) {
 }
 
 game.updateScore = function(correct) {
-    $('#score_correct').text(correct + '/10');
+    $('#score_correct').text(parseInt(correct) * 10);
 }
 
 game.updateLives = function(remains) {
