@@ -43,8 +43,7 @@ class game_manager{
 		}
 		
 		if($state){
-			$this->session = array();
-			$this->set_questions_answers();
+			$this->start_game();
 		}else{
 			if(is_array($_SESSION["game"]) && count($_SESSION["game"]) > 0 ){
 				$this->session = $_SESSION["game"];
@@ -55,7 +54,9 @@ class game_manager{
 				$this->wrong = $this->session["wrong"];
 				$this->score = $this->session["score"];
 				$this->current_question_index = $this->session["question_index"];
-				$this->update_browser_session();
+				if($this->is_game_over()){
+					return FALSE;
+				}
 			}
 		}
 	}
@@ -89,6 +90,13 @@ class game_manager{
 		return FALSE;
 	}
 	
+	public function is_game_over(){
+		if($this->finished){
+			return TRUE;
+		}
+		return FALSE;
+	}
+	
 	public function get_current_question(){
 		return $this->qa[$this->current_question_index]["q"];
 	}
@@ -105,21 +113,13 @@ class game_manager{
 		return $this->qa[$this->current_question_index]["lng"];
 	}
 	
+	public function start_game(){
+		$this->session = array();
+		$this->set_questions_answers();
+		return TRUE;
+	}
+	
 	public function finish_game(){
-		/*$this->session = array(
-			"qa" 		=> array(),
-			"started" 	=> FALSE,
-			"finished"	=> FALSE,
-			"correct"	=> 0,
-			"wrong"		=> 0,
-			"score"		=> 0,
-			"q" => "Test Question?",
-			"a" => "Test Answer",
-			"lat" => "25.884954",
-			"lng" => "-80.45454",
-			"question_index" => 0,
-		); */
-		$this->started = FALSE;
 		$this->finished = TRUE;
 		$this->update_browser_session();
 		return FALSE;
