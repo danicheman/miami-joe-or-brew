@@ -19,7 +19,13 @@ function initialize(lat,lng) {
 }
 
 function movePoint(hopLat, hopLng) {
-    map.panTo(new google.maps.LatLng(-34.397, 150.644));
+    var myLatlng = new google.maps.LatLng(hopLat,hopLng);
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'What is this place?'
+        });
+    map.panTo(marker.getPosition());
     
 }
 
@@ -27,7 +33,7 @@ setTimeout(function() {
     
     myLat = 25.796549;
     myLong = -80.275614;
-    console.log("timeout");
+    
     initialize(myLat,myLong);
 },1000);
 
