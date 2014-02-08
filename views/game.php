@@ -36,13 +36,13 @@
     <article class="row">
         <section id="beer" class="col-md-6">
             <div class="row">
-                <a href="#"><img class="col-md-6 col-md-offset-3" src="../images/beer-icon.gif"></a>
+                <a href="#"><img class="col-md-6 col-md-offset-4" src="../images/beer-icon.gif"></a>
             </div>
         </section>
 
         <section id="cafe" class="col-md-6">
             <div class="row">
-                <a href="#"><img class="col-md-8 col-md-offset-1" src="../images/coffee-icon.png"></a>
+                <a href="#"><img class="col-md-6 col-md-offset-2" src="../images/coffee-icon.png"></a>
             </div>
         </section>
     </article>
