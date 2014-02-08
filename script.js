@@ -10,3 +10,9 @@ game.test = function() {
 	alert('js is working');
 	//
 }
+
+$(document).ready(
+
+	game.test();
+
+);
