@@ -24,7 +24,7 @@ class game_manager{
 	public $current_question_index = 0;
 	
 	public function __constructor(){
-		if (session_status() == PHP_SESSION_NONE) { //already started
+		if (session_id() == '') { //already started
 		    session_start();
 		}
 		
