@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../dist/css/custom.css">    
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -32,7 +33,9 @@
     <article class="versus-row">
         vs.
     </article>
-
+    <article class="row">
+        <section id="map" class="col-md-6"></section>
+    </article>
     <article class="row">
         <section id="beer" class="col-md-6">
             <div class="row">
@@ -57,7 +60,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="../dist/js/jquery-ui-shake.min.js"></script>
 	<script src="../script.js"></script>
-
+    <script src="../dist/js/map.js"></script>
     <script type="text/javascript">
         $(function() {
             game.startGame();
