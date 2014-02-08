@@ -58,7 +58,6 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="../dist/js/jquery-ui-shake.min.js"></script>
-	<script src="../script.js"></script>
     <script src="../dist/js/map.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -83,5 +82,6 @@
     </script>
     <?=!empty($js_include)?$js_include:''; ?>
     
+	<script src="../script.js"></script>
 </body>
 </html>
