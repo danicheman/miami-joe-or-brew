@@ -107,7 +107,7 @@ game.finish = function (hasWon) {
 
         setTimeout(function() {
             window.location = '/?page=lose';
-        }, 1000);
+        }, 2000);
 	}
 }
 
