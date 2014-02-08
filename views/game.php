@@ -28,7 +28,7 @@
         <h1 id="question_text"></h1>
         <h2 id="question_hint"></h2>
     </header>
-<div id="map-canvas"/>
+
     <article class="versus-row">
         vs.
     </article>

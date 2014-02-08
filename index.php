@@ -18,7 +18,7 @@ if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'
     }
     if($_GET['page'] != 'game')include('/views/layout.php');
     else {
-        $js_include =  ' <script type="text/javascript"
+        /*$js_include =  ' <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX3fJinq8yzUBt3nut7SEWgObFkvKheFE&sensor=false">
     </script>
     <script type="text/javascript">
@@ -33,7 +33,7 @@ if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'
       google.maps.event.addDomListener(window, \'load\', initialize);
     </script>';
    
-    }
+    }*/
     include('views/'.$_GET['page'].'.php');
 }else {
     include('views/layout.php');    
