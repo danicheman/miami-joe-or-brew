@@ -1,5 +1,19 @@
 <?php
-
+/**
+ * Game Manager Class
+ *
+ * Usage:
+ *
+ * 	   //to start game
+ *     $game_manager = new game_manager();
+ * 
+ * 	   //to check answer once game is started
+ *     $game_manager = new game_manager();
+ *     $array = $game_manager->check_answer("test",1);
+ * 
+ * 	   //many methods for scores, status etc
+ *
+ */
 class game_manager{
 	
 	public $session = array(
@@ -13,7 +27,7 @@ class game_manager{
 		"a" => "Test Answer",
 		"lat" => "25.884954",
 		"lng" => "-80.45454",
-		"current_question_index" => 0,
+		"question_index" => 0,
 	);
 	public $qa = array();
 	public $started = FALSE;
@@ -36,7 +50,7 @@ class game_manager{
 			$this->correct = $this->session["correct"];
 			$this->wrong = $this->session["wrong"];
 			$this->score = $this->session["score"];
-			$this->current_question_index = $this->session["current_question_index"];
+			$this->current_question_index = $this->session["question_index"];
 			$this->update_browser_session();
 		}else{
 			$this->set_questions_answers();
@@ -95,6 +109,8 @@ class game_manager{
 	}
 	
 	public function check_answer($answer,$question_index = FALSE){
+		if($this->is_started() == FALSE) exit;
+		
 		if($question_index == FALSE){
 			$question_index = $this->current_question_index;
 		}
@@ -117,6 +133,7 @@ class game_manager{
 		$this->qa = $fs_api->fetchBrewVenues();
 		$this->session["qa"] = $this->qa;
 		$this->started = TRUE;
+		$this->current_question_index++;
 		$this->update_browser_session();
 	}
 	
@@ -132,7 +149,7 @@ class game_manager{
 			"a" => $this->get_current_answer(),
 			"lat" => $this->get_current_latitude(),
 			"lng" => $this->get_current_longitude(),
-			"current_question_index" => $this->current_question_index,
+			"question_index" => $this->current_question_index,
 		);
 		$_SESSION["game"] = $this->session;
 	}

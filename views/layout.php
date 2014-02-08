@@ -36,15 +36,13 @@
     -->
       <div class="jumbotron">
         <h1>Brew vs. Brew</h1>
-        <? if(empty($jumbotron_message)):?><p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><a href="?page=game" class="btn btn-lg btn-success" href="#" role="button">Start now!</a></p>
+        <? if(empty($jumbotron_message)):?>
+	<p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
+        <p><a href="?page=game" class="btn btn-lg btn-success start" role="button">Start now!</a></p>
         <? else:
             echo $jumbotron_message;
            endif; ?>
       </div>
-
-	  <button class="start">Start Game</button>
-	  <button class="send">Send Answer</button>
 
 
       <div class="footer">

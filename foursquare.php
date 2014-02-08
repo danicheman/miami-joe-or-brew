@@ -42,10 +42,14 @@ class Foursquare_API {
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_VERBOSE, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
             $res = curl_exec($ch);
 
-            if ($res === false) continue;
+            if ($res === false) {
+                echo "ERROR: " . curl_error($ch) . "<br>\n";
+                continue;
+            }
 
             $data = json_decode($res);
 
