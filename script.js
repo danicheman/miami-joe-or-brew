@@ -8,4 +8,5 @@ window.game = (window.game || {});
 
 game.test = function() {
 	alert('js is working');
+	//
 }
