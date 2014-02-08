@@ -24,7 +24,7 @@ game.randomQuestionHint = function () {
 	return item;
 }
 
-game.sendAnswer = function() {
+game.sendAnswer = function(answer_data) {
 	$.post( "/api.php","type=answer&answer=coffee&question_index=2", function( data ) {
 		//just posted an answer, should get question now
 		//todo: take the question and update the dom
@@ -36,14 +36,17 @@ game.sendAnswer = function() {
 game.startGame = function() {
 	$.post( "/api.php","type=start", function( data ) {
 		alert(data);
-		//game.questionReceived(data);
+		game.questionReceived(data);
 	});
 	//todo: now change the dom to start the game and get a question
 }
 
 game.answerClicked = function(e) {
+	var answer_data = {};
+	answer_data.answer = "beer";
+	answer_data.type = "answer";
 
-	game.sendAnswer();
+	game.sendAnswer(answer_data);
 }
 
 game.questionReceived = function (question) {
@@ -51,12 +54,13 @@ game.questionReceived = function (question) {
 	var question_index = question.index;
 	$('#question_text').html(question_text);
 	$('#question_hint').html(game.randomQuestionHint());
+	alert(data);
 
 }
 
 $(document).ready(function() {
 	var startButton = $('.start');
-	var answerButtons = $('.send');
+	var answerButtons = $('.answer');
 
 	startButton.on('click', game.startGame);
 	answerButtons.on('click', game.answerClicked);
