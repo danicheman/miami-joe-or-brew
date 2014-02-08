@@ -15,5 +15,8 @@ div#preload { display: none; }
 }
 #explosion{
     position:absolute;
-    
+    bottom: 30px;
+}
+.button-container {
+    height: 45px;
 }

@@ -37,7 +37,7 @@
       <div class="jumbotron">
         <h1>Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><button id="start" class="btn btn-lg btn-success" href="#" role="button">Start now!</button></p>
+        <p><a href="game.php" class="btn btn-lg btn-success" href="#" role="button">Start now!</a></p>
       </div>
 
 	  <button class="start">Start Game</button>
