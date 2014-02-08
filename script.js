@@ -12,13 +12,11 @@ game.test = function() {
 
 game.randomQuestionHint = function () {
 	var hints = [
-		"question hint 1",
-		"question hint 2",
-		"question hint 3",
-		"question hint 4",
-		"question hint 5",
-		"question hint 6",
-		"question hint 7",
+		"Is it a colada or a chelada?",
+		"Are they serving beers or ",
+		"Are they serving Fosters or Folgers?",
+		"Are they serving Coors or Cappuccino?",
+		"Miller or Mocha?",
 
 	];
 

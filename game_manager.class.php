@@ -23,8 +23,8 @@ class game_manager{
 	public $score = 0;
 	public $current_question_index = 0;
 	
-	public function __constructor(){
-		if (session_status() == PHP_SESSION_NONE) { //already started
+	public function __construct(){
+		if (session_id() == '') { //already started
 		    session_start();
 		}
 		
