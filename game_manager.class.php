@@ -37,23 +37,26 @@ class game_manager{
 	public $score = 0;
 	public $current_question_index = 0;
 	
-	public function __construct(){
+	public function __construct($state=false){
 		if (session_id() == '') { //already started
 		    session_start();
 		}
 		
-		if(is_array($_SESSION["game"]) && count($_SESSION["game"]) > 0 ){
-			$this->session = $_SESSION["game"];
-			$this->qa = $this->session["qa"];
-			$this->started = $this->session["started"];
-			$this->finished = $this->session["finished"];
-			$this->correct = $this->session["correct"];
-			$this->wrong = $this->session["wrong"];
-			$this->score = $this->session["score"];
-			$this->current_question_index = $this->session["question_index"];
-			$this->update_browser_session();
-		}else{
+		if($state == "start"){
+			$this->session = array();
 			$this->set_questions_answers();
+		}else{
+			if(is_array($_SESSION["game"]) && count($_SESSION["game"]) > 0 ){
+				$this->session = $_SESSION["game"];
+				$this->qa = $this->session["qa"];
+				$this->started = $this->session["started"];
+				$this->finished = $this->session["finished"];
+				$this->correct = $this->session["correct"];
+				$this->wrong = $this->session["wrong"];
+				$this->score = $this->session["score"];
+				$this->current_question_index = $this->session["question_index"];
+				$this->update_browser_session();
+			}
 		}
 	}
 	
@@ -102,10 +105,35 @@ class game_manager{
 		return $this->qa[$this->current_question_index]["lng"];
 	}
 	
-	public function get_next_question(){
-		$this->current_question_index++;
+	public function finish_game(){
+		/*$this->session = array(
+			"qa" 		=> array(),
+			"started" 	=> FALSE,
+			"finished"	=> FALSE,
+			"correct"	=> 0,
+			"wrong"		=> 0,
+			"score"		=> 0,
+			"q" => "Test Question?",
+			"a" => "Test Answer",
+			"lat" => "25.884954",
+			"lng" => "-80.45454",
+			"question_index" => 0,
+		); */
+		$this->started = FALSE;
+		$this->finished = TRUE;
 		$this->update_browser_session();
-		return $this->qa[$this->current_question_index]["q"];
+		return FALSE;
+	}
+	
+	public function get_next_question(){
+		if($this->current_question_index < (count($this->qa)-1)){
+			$this->current_question_index++;
+			$this->update_browser_session();
+			return $this->qa[$this->current_question_index]["q"];
+		}
+		else{
+			$this->finish_game();
+		}
 	}
 	
 	public function check_answer($answer,$question_index = FALSE){
