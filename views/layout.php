@@ -83,6 +83,8 @@
 
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="../script.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
