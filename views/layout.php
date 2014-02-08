@@ -15,12 +15,6 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../dist/css/custom.css">    
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!- -[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,16 +37,17 @@
       <div class="jumbotron">
         <h1>Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><button class="btn btn-lg btn-success" href="#" role="button">Start now!</button></p>
+        <p><button id="start" class="btn btn-lg btn-success" href="#" role="button">Start now!</button></p>
       </div>
 
 	  <button class="start">Start Game</button>
 	  <button class="send">Send Answer</button>
 
       <?php
-        
+        $js_include = '';
         if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'])) {
             include($_GET['page'].'.php');
+            $js_include = '<script src="../dist/js/'.$_GET['page'].'.js"></script>';
         }
       ?>
       <!--<div class="row marketing">
@@ -91,6 +86,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
 <script src="../script.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<?=$js_include?>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
