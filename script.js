@@ -11,7 +11,7 @@ game.test = function() {
 }
 
 game.sendAnswer = function() {
-	$.post( "/api.php","string", function( data ) {
+	$.post( "/api.php","string=test", function( data ) {
 		alert(data);
 	});
 }
