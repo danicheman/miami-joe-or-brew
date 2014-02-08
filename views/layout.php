@@ -13,6 +13,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/custom.css">    
 
     <!-- Custom styles for this template -->
     <link href="jumbotron-narrow.css" rel="stylesheet">
@@ -30,7 +31,7 @@
   <body>
 
     <div class="container">
-      <div class="header">
+      <!--<div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="#">About</a></li>
@@ -38,7 +39,7 @@
         </ul>
         <h3 class="text-muted">Miami Brew vs. Brew</h3>
       </div>
-
+    -->
       <div class="jumbotron">
         <h1>Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>

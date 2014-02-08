@@ -11,8 +11,8 @@ game.test = function() {
 	//
 }
 
-$(document).ready(
+$(document).ready(function() {
 
-	game.test();
+	//game.test();
 
-);
+});
