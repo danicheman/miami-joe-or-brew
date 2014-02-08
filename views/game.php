@@ -49,6 +49,7 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="../dist/js/jquery-ui-shake.min.js"></script>
+	<script src="../script.js"></script>
 
 	<button class="start">Start Game</button>
 	<button class="send">Send Answer</button>
