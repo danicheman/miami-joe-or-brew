@@ -27,11 +27,10 @@ game.randomQuestionHint = function () {
 }
 
 game.sendAnswer = function(answer_data) {
-	answer_data.question_index = 1;
 	var query = $.param(answer_data);
 	$.post( "/api.php", query, function( data ) {
 		game.questionReceived(data);
-	});
+	}, 'json');
 
 }
 
@@ -39,7 +38,8 @@ game.startGame = function() {
 	$.post( "/api.php","type=start", function( data ) {
 		alert(data);
 		game.questionReceived(data);
-	});
+
+	} ,'json');
 	//todo: now change the dom to start the game and get a question
 }
 
