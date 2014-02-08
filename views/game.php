@@ -48,9 +48,9 @@
     </article>
      
     <footer class="row">
-        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-2">&nbsp;</div>
         <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png" width="200"></div>
-        <div class="col-md-1 col-md-offset-7" id="elephant"><img src="../images/elephpant.png" width="200" style="margin-top: 50px;"></div>
+        <div class="col-md-1 col-md-offset-6" id="elephant"><img src="../images/elephpant.png" width="200" style="margin-top: 50px;"></div>
         <div class="col-md-1">&nbsp;</div>
     </footer>
     
