@@ -55,6 +55,7 @@ game.answerClicked = function(e) {
 	}
 	else {
 		game.indicateFailure(answer);
+        game.zombieAttack();
 	}
 
 	game.sendAnswer(answer_data);
@@ -86,12 +87,27 @@ game.indicateFailure = function (beverage_type) {
 	highlightAnswer(beverage_type, "red");
 }
 
+game.zombieAttack = function() {
+    var zombie_offset = parseInt( $('#zombie').attr('class').replace(/col-md-1 col-md-offset-/, ''));
+    var elephant_offset = parseInt( $('#elephant').attr('class').replace(/col-md-1 col-md-offset-/, ''));
+
+    zombie_offset += 2;
+    elephant_offset -= 2;
+
+    $('#zombie').attr('class', 'col-md-1 col-md-offset-' + zombie_offset);
+    $('#elephant').attr('class', 'col-md-1 col-md-offset-' + elephant_offset);
+}
+
 game.finish = function (hasWon) {
 	if (hasWon) {
 		window.location = '/?page=win';
 	}
 	else {
-		window.location = '/?page=lose';
+        $('#elephant img').attr('src', 'http://brewvsbrew.azurewebsites.net/images/bacon.png');
+
+        setTimeout(function() {
+            window.location = '/?page=lose';
+        }, 1000);
 	}
 }
 
