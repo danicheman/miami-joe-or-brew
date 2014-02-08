@@ -13,7 +13,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/css/custom.css">    
+    <link rel="stylesheet" href="dist/css/custom.css">    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,19 +37,13 @@
       <div class="jumbotron">
         <h1>Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><a href="game.php" class="btn btn-lg btn-success" href="#" role="button">Start now!</a></p>
+        <p><a href="?page=game" class="btn btn-lg btn-success" href="#" role="button">Start now!</a></p>
       </div>
 
 	  <button class="start">Start Game</button>
 	  <button class="send">Send Answer</button>
 
-      <?php
-        $js_include = '';
-        if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'])) {
-            include($_GET['page'].'.php');
-            $js_include = '<script src="../dist/js/'.$_GET['page'].'.js"></script>';
-        }
-      ?>
+
       <!--<div class="row marketing">
         <div class="col-lg-6">
           <h4>Subheading</h4>
@@ -84,7 +78,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-<script src="../script.js"></script>
+<script src="script.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <?=$js_include?>
     <!-- Bootstrap core JavaScript
