@@ -55,3 +55,8 @@ position:fixed;
 .button-container {
     height: 45px;
 }
+#map {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+}
