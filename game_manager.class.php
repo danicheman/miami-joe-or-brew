@@ -5,7 +5,7 @@
  * Usage:
  *
  * 	   //to start game
- *     $game_manager = new game_manager();
+ *     $game_manager = new game_manager(TRUE);
  * 
  * 	   //to check answer once game is started
  *     $game_manager = new game_manager();
@@ -37,12 +37,12 @@ class game_manager{
 	public $score = 0;
 	public $current_question_index = 0;
 	
-	public function __construct($state=false){
+	public function __construct($state = FALSE){
 		if (session_id() == '') { //already started
 		    session_start();
 		}
 		
-		if($state == "start"){
+		if($state){
 			$this->session = array();
 			$this->set_questions_answers();
 		}else{
