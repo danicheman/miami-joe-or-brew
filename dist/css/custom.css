@@ -1,11 +1,30 @@
-.drink {
-    height: 400px;
-    width: 400px;
-    float: left;
-}
 body {
     padding-top:40px;
     background-color:black;
+}
+
+#gameBoard {
+    background-color: black;
+    padding-top: 20px;
+}
+#gameBoard header {
+    padding-bottom: 30px;
+}
+#gameBoard h1,
+#gameBoard h2 {
+    color: white;
+    text-align: center;
+}
+#gameBoard h1 {
+    font-size: 4em;
+}
+#gameBoard .versus-row {
+    color: white;
+    font-size: 5.3em;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    width: 100%;
 }
 
 div#preload { display: none; }
