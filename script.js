@@ -27,7 +27,6 @@ game.randomQuestionHint = function () {
 }
 
 game.sendAnswer = function(answer_data) {
-	answer_data.question_index = 1;
 	var query = $.param(answer_data);
 	$.post( "/api.php", query, function( data ) {
 		game.questionReceived(data);
