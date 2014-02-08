@@ -83,9 +83,9 @@ endif; ?>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-<script src="script.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <?=$js_include?>
+<script src="script.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
