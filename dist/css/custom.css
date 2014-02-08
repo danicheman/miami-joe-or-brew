@@ -18,6 +18,10 @@ body {
 #gameBoard h1 {
     font-size: 4em;
 }
+#gameBoard h2 {
+    font-size: 1.5em;
+    font-style: italic;
+}
 #gameBoard .versus-row {
     color: white;
     font-size: 5.3em;

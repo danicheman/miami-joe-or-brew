@@ -25,8 +25,8 @@
 <body id="gameBoard">
 
     <header>
-        <h1 id="question_text"></h1>
-        <h2 id="question_hint"></h2>
+        <h1 id="question_text">&nbsp;</h1>
+        <h2 id="question_hint">&nbsp;</h2>
     </header>
 
     <article class="versus-row">
@@ -49,8 +49,8 @@
      
     <footer class="row">
         <div class="col-md-1">&nbsp;</div>
-        <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png"></div>
-        <div class="col-md-1 col-md-offset-7" id="elephant"><img src="../images/elephpant.png" style="margin-top: 60px;"></div>
+        <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png" width="200"></div>
+        <div class="col-md-1 col-md-offset-7" id="elephant"><img src="../images/elephpant.png" width="200" style="margin-top: 50px;"></div>
         <div class="col-md-1">&nbsp;</div>
     </footer>
     
