@@ -41,6 +41,7 @@ game.startGame = function() {
 }
 
 game.answerClicked = function(e) {
+	e.preventDefault();
 	var answer = $(this).attr('id');
 	var answer_data = {};
 	answer_data.answer = answer;
