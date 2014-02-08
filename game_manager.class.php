@@ -106,7 +106,7 @@ class game_manager{
 	}
 	
 	public function finish_game(){
-		$this->session = array(
+		/*$this->session = array(
 			"qa" 		=> array(),
 			"started" 	=> FALSE,
 			"finished"	=> FALSE,
@@ -118,7 +118,9 @@ class game_manager{
 			"lat" => "25.884954",
 			"lng" => "-80.45454",
 			"question_index" => 0,
-		);
+		); */
+		$this->started = FALSE;
+		$this->finished = TRUE;
 		$this->update_browser_session();
 		return FALSE;
 	}
