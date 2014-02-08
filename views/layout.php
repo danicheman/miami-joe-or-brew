@@ -46,7 +46,8 @@
       </div>
 
       <?php
-        if(in_array($_GET['page'],['start','win', 'lose','game'])) {
+        
+        if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'])) {
             include($_GET['page'].'.php');
         }
       ?>
