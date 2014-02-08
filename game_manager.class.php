@@ -1,5 +1,19 @@
 <?php
-
+/**
+ * Game Manager Class
+ *
+ * Usage:
+ *
+ * 	   //to start game
+ *     $game_manager = new game_manager();
+ * 
+ * 	   //to check answer once game is started
+ *     $game_manager = new game_manager();
+ *     $array = $game_manager->check_answer("test",1);
+ * 
+ * 	   //many methods for scores, status etc
+ *
+ */
 class game_manager{
 	
 	public $session = array(
@@ -95,6 +109,8 @@ class game_manager{
 	}
 	
 	public function check_answer($answer,$question_index = FALSE){
+		if($this->is_started() == FALSE) exit;
+		
 		if($question_index == FALSE){
 			$question_index = $this->current_question_index;
 		}
