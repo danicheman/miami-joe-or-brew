@@ -38,7 +38,7 @@
         <h1 style="margin-top: 0;">Brew vs. Brew</h1>
         <p class="lead">Welcome to the Sunshine PHP 2014  game Brew vs. Brew! Miami's favorite beer/coffee/bacon/zombie/ElePHPant online trivia game.
 	Look at the map, read the hint, and try to guess if the Miami hotspot is a bar or a coffeehouse</p>
-	<ul class="col-md-7 col-md-offset-3" >
+	<ul class="col-md-7 col-md-offset-3 text-left" >
 	  <li>Click on the coffee image or beer image to make your decision accordingly.</li>
 	  <li>Look out! On the bottom of the screen the zombie is trying to catch the ElePHPant</li>
 	  <li>If you can guess 10 answers correctly, ElePHPant will be able to <strong>escape</strong> </li>
