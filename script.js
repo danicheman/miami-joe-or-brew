@@ -77,6 +77,10 @@ game.questionReceived = function (question) {
 	game.current_answer = question.a;
 	$('#question_text').html(question_text);
 	$('#question_hint').html(game.randomQuestionHint());
+
+    game.updateScore(question.correct);
+    game.updateLives(question.wrong);
+
 	//update map
 	//initialize(question.lat, question.lng);
 	movePoint(question.lat, question.lng);
@@ -86,8 +90,16 @@ game.indicateSuccess = function(beverage_type) {
 	highlightAnswer(beverage_type, "lime");
 }
 
-game.indicateFailure = function (beverage_type) {
+game.indicateFailure = function(beverage_type) {
 	highlightAnswer(beverage_type, "red");
+}
+
+game.updateScore = function(correct) {
+    $('#score_correct').text(correct + '/10');
+}
+
+game.updateLives = function(remains) {
+    $('#score_lives').text(remains + '/3');
 }
 
 game.zombieAttack = function() {
