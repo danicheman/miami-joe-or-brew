@@ -55,8 +55,6 @@ game.questionReceived = function (question) {
 	var question_index = question.index;
 	$('#question_text').html(question_text);
 	$('#question_hint').html(game.randomQuestionHint());
-	alert(data);
-
 }
 
 $(document).ready(function() {
