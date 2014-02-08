@@ -25,6 +25,8 @@ function movePoint(hopLat, hopLng) {
         map: map,
         title: 'What is this place?'
         });
+
+    map.clearOverlays();
     map.panTo(marker.getPosition());
     
 }
