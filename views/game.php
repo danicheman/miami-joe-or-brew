@@ -25,11 +25,17 @@
 
 <body id="gameBoard">
     <section id="map" class="col-md-6"></section>
+
     <header>
-        
         <h1 id="question_text">&nbsp;</h1>
         <h2 id="question_hint">&nbsp;</h2>
     </header>
+
+    <aside class="score-board">
+        <div class="title">Brew Score</div>
+        <div class="correct">Correct: <span id="score_correct">0/10</span></div>
+        <div class="lives">Incorrect: <span id="score_lives">3/3</span></div>
+    </aside>
 
     <article class="versus-row">
         vs.
@@ -38,13 +44,13 @@
     <article class="row">
         <section id="beer" class="col-md-6">
             <div class="row">
-                <a href="#" class="answer"><img class="col-md-6 col-md-offset-4" src="../images/beer_awesome.jpg"></a>
+                <a href="#" class="answer"><img class="col-md-5 col-md-offset-5" src="../images/beer_awesome.jpg"></a>
             </div>
         </section>
 
         <section id="coffee" class="col-md-6">
             <div class="row">
-                <a href="#" class="answer"><img class="col-md-6 col-md-offset-2" src="../images/coffee_awesome.png"></a>
+                <a href="#" class="answer"><img class="col-md-5 col-md-offset-2" src="../images/coffee_awesome.png"></a>
             </div>
         </section>
     </article>

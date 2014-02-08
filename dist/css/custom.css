@@ -26,12 +26,29 @@ body {
     color: white;
     font-size: 5.3em;
     position: absolute;
-    top: 300px;
+    top: 265px;
     text-align: center;
     width: 100%;
 }
 #gameBoard #beer a img {
     margin-top: -35px;
+}
+.score-board {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.score-board .title {
+    color: white;
+    font-size: 2.2em;
+}
+.score-board .correct {
+    font-size: 1.7em;
+    color: #8c8;
+}
+.score-board .lives {
+    font-size: 1.7em;
+    color: #c88;
 }
 
 div#preload { display: none; }
@@ -41,11 +58,9 @@ div#preload { display: none; }
 }
 
 #winner {
-
-height:400px;
- background-color:#ffffff;
-position:fixed;
-    
+    height:400px;
+    background-color:#ffffff;
+    position:fixed;
 }
 
 #explosion{
@@ -59,6 +74,6 @@ position:fixed;
     position: absolute;
     height: 250px;
     width: 300px;
-    left:15px;
+    right: 15px;
     z-index: 10;
 }
