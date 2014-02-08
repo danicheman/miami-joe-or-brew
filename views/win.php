@@ -1,1 +1,1 @@
-<img id="winner" src="images/elephant.png" />
+<img id="winner" src="images/elephpant.png" />
