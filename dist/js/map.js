@@ -22,7 +22,7 @@ function initialize(lat,lng) {
 function movePoint(hopLat, hopLng) {
     if (typeof map == undefined) {
         initialize(hopLat,hopLng);
-        return 
+        return;
     }
     var myLatlng = new google.maps.LatLng(hopLat,hopLng);
     /*var marker = new google.maps.Marker({
