@@ -24,15 +24,16 @@ function movePoint(hopLat, hopLng) {
 }
 
 setTimeout(function() {
-    myLat = 25;
-    myLong = -80;
+    
+    myLat = 25.796549;
+    myLong = -80.275614;
     console.log("timeout");
     initialize(myLat,myLong);
 },1000);
 
 setTimeout(function() {
-    myLat = 23;
-    myLong = -79;
+    myLat = 25.786005;
+    myLong = -80.256189;
     console.log("timeout");
     movePoint(myLat,myLong);
 },2000);
