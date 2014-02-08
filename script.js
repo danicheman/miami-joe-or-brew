@@ -32,8 +32,8 @@ game.questionReceived = function (question) {
 }
 
 $(document).ready(function() {
-	var startButton = $('.jumbotron');
-	var answerButtons = $('.active');
+	var startButton = $('.start');
+	var answerButtons = $('.send');
 
 	startButton.on('click', game.startGame);
 	answerButtons.on('click', game.sendAnswer);

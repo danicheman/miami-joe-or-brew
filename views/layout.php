@@ -46,6 +46,9 @@
         <p><button class="btn btn-lg btn-success" href="#" role="button">Start now!</button></p>
       </div>
 
+	  <button class="start">Start Game</button>
+	  <button class="send">Send Answer</button>
+
       <?php
         
         if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'])) {
