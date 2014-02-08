@@ -19,7 +19,7 @@ if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'
     if($_GET['page'] != 'game')include('/views/layout.php');
     else {
         $js_include =  ' <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_EGPv8-hDOj4HNsCQoPtpsZ-QASrJIt0&sensor=false">
+      src="https://maps.googleapis.com/maps/api/js?key=d4OHOu5a-JBO4kn_ds4o5FFx&sensor=false">
     </script>
     <script type="text/javascript">
       function initialize() {
