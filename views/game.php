@@ -47,5 +47,7 @@
         </section>
     </article>
 
+	<button class="start">Start Game</button>
+	<button class="send">Send Answer</button>
 </body>
 </html>
