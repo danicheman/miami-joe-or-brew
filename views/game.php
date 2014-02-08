@@ -62,6 +62,22 @@
         $(function() {
             game.startGame();
         });
+
+        function highlightAnswer(type, color)
+        {
+            var style = { border: 'solid 2px ' + color };
+            var clear = { border: 'none' };
+
+            var $elem = $('#' + type + ' img').css(style);
+
+            setTimeout(function() { $elem.css(clear); }, 100); 
+            setTimeout(function() { $elem.css(style); }, 200);
+
+            setTimeout(function() { $elem.css(clear); }, 300);
+            setTimeout(function() { $elem.css(style); }, 400);
+
+            setTimeout(function() { $elem.css(clear); }, 500);
+        }
     </script>
 
 </body>
