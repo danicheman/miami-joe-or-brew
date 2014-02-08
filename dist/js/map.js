@@ -19,8 +19,8 @@ function initialize(lat,lng) {
 }
 
 function movePoint(hopLat, hopLng) {
-    var pnt = new GLatLng(hopLat, hopLng);
-    map.panTo(pnt);
+    map.panTo(hopLat, hopLng);
+    
 }
 
 setTimeout(function() {
