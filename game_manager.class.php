@@ -133,6 +133,7 @@ class game_manager{
 		$this->qa = $fs_api->fetchBrewVenues();
 		$this->session["qa"] = $this->qa;
 		$this->started = TRUE;
+		$this->current_question_index++;
 		$this->update_browser_session();
 	}
 	
