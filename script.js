@@ -11,11 +11,12 @@ game.test = function() {
 }
 
 game.question_index = 0;
+game.current_answer = "";
 
 game.randomQuestionHint = function () {
 	var hints = [
 		"Is it a colada or a chelada?",
-		"Are they serving beers or ",
+		"Are they serving beers or beans?",
 		"Are they serving Fosters or Folgers?",
 		"Are they serving Coors or Cappuccino?",
 		"Miller or Mocha?",
@@ -36,11 +37,9 @@ game.sendAnswer = function(answer_data) {
 
 game.startGame = function() {
 	$.post( "/api.php","type=start", function( data ) {
-		alert(data);
 		game.questionReceived(data);
 
 	} ,'json');
-	//todo: now change the dom to start the game and get a question
 }
 
 game.answerClicked = function(e) {
@@ -51,14 +50,49 @@ game.answerClicked = function(e) {
 	answer_data.type = "answer";
 	answer_data.question_index = game.question_index;
 
+	if (game.current_answer == answer) {
+		game.indicateSuccess(answer);
+	}
+	else {
+		game.indicateFailure(answer);
+	}
+
 	game.sendAnswer(answer_data);
 }
 
 game.questionReceived = function (question) {
+	if (question.wrong >= 3 ) {
+		game.finish(false);
+		return;
+	}
+
+	if (question.finished) {
+		game.finish(true);
+		return;
+	}
+
 	var question_text = question.q;
 	game.question_index = question.question_index;
+	game.current_answer = question.a;
 	$('#question_text').html(question_text);
 	$('#question_hint').html(game.randomQuestionHint());
+}
+
+game.indicateSuccess = function(beverage_type) {
+	highlightAnswer(beverage_type, "lime");
+}
+
+game.indicateFailure = function (beverage_type) {
+	highlightAnswer(beverage_type, "red");
+}
+
+game.finish = function (hasWon) {
+	if (hasWon) {
+		window.location = '/?page=win';
+	}
+	else {
+		window.location = '/?page=lose';
+	}
 }
 
 $(document).ready(function() {
