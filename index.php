@@ -32,8 +32,8 @@ if(!empty($_GET['page']) && in_array($_GET['page'],['start','win', 'lose','game'
       }
       google.maps.event.addDomListener(window, \'load\', initialize);
     </script>';
-   
-    }*/
+   */
+    }
     include('views/'.$_GET['page'].'.php');
 }else {
     include('views/layout.php');    
