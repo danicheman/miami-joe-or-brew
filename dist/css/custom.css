@@ -14,6 +14,7 @@ body {
 #gameBoard h2 {
     color: white;
     text-align: center;
+    z-index: 10;
 }
 #gameBoard h1 {
     font-size: 3.5em;
@@ -76,5 +77,4 @@ div#preload { display: none; }
     width: 300px;
     right: 15px;
     opacity: 0.7;
-    z-index: 10;
 }
