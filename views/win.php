@@ -1,1 +1,1 @@
-<img id="winner" src="images/elephpant.png" />
+<img id="winner" src="images/php-icon.png" />
