@@ -46,7 +46,7 @@
             </div>
         </section>
     </article>
-
+     <div id="map-canvas"/>
     <footer class="row">
         <div class="col-md-1">&nbsp;</div>
         <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png"></div>
@@ -79,6 +79,7 @@
             setTimeout(function() { $elem.css(clear); }, 500);
         }
     </script>
-
+    <?=!empty($js_include)?$js_include:''; ?>
+    
 </body>
 </html>
