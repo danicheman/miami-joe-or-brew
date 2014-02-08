@@ -68,16 +68,23 @@ class Foursquare_API {
         }
 
         $venues = array();
+        $unique = array();
 
         if (count($result) >= $count)
         {
-            $choices = array_rand($result, $count);
-
-            foreach ($choices as $choice)
+            while (count($venues) < $count)
             {
-                $result[$choice]['q'] = $this->sanitizeVenueName($result[$choice]['q']);
+                $choice = array_rand($result, 1);
+
+                $name = $this->sanitizeVenueName($result[$choice]['q']);
+
+                if (isset($unique[$name])) continue;
+
+                $result[$choice]['q'] = $name;
 
                 $venues[] = $result[$choice];
+
+                $unique[$name] = true;
             }
         }
 
