@@ -24,8 +24,9 @@
 </head>
 
 <body id="gameBoard">
-
+    <section id="map" class="col-md-6"></section>
     <header>
+        
         <h1 id="question_text">&nbsp;</h1>
         <h2 id="question_hint">&nbsp;</h2>
     </header>
@@ -33,9 +34,7 @@
     <article class="versus-row">
         vs.
     </article>
-    <article class="row">
-        <section id="map" class="col-md-6"></section>
-    </article>
+
     <article class="row">
         <section id="beer" class="col-md-6">
             <div class="row">
