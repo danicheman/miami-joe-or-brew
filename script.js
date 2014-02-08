@@ -78,7 +78,8 @@ game.questionReceived = function (question) {
 	$('#question_text').html(question_text);
 	$('#question_hint').html(game.randomQuestionHint());
 	//update map
-	initialize(question.lat, question.lng);
+	//initialize(question.lat, question.lng);
+	movePoint(question.lat, question.lng);
 }
 
 game.indicateSuccess = function(beverage_type) {
