@@ -34,7 +34,8 @@
       </div>
     -->
       <div class="jumbotron" style="text-align: center;">
-<? if (empty($jumbotron_message)): ?>
+
+<?php if (empty($jumbotron_message)): ?>
         <h1 style="margin-top: 0;">Brew vs. Brew</h1>
         <p class="lead">Welcome to the Sunshine PHP 2014 Hackathon game Brew vs. Brew! Miami's favorite beer/coffee/bacon/zombie/ElePHPant online trivia game.</p>
 	<p>Look at the map, read the hint, and try to guess if the Miami hotspot is a bar or a coffeehouse.</p>
@@ -54,7 +55,7 @@
             <div><img class="col-md-2 col-md-offset-4" src="images/beer-icon.gif"></div>
             <div><img class="col-md-2 col-md-offset-0" src="images/coffee_awesome.png"></div>
         </div>
-<? else:
+<?php else:
     echo $jumbotron_message;
 endif; ?>
       </div>
