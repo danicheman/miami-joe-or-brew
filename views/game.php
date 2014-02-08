@@ -25,8 +25,8 @@
 <body id="gameBoard">
 
     <header>
-        <h1 id="question_text">________ Can Island</h1>
-        <h2 id="question_hint">Are they serving cold ones or cafe con leche?</h2>
+        <h1 id="question_text"></h1>
+        <h2 id="question_hint"></h2>
     </header>
 
     <article class="versus-row">
@@ -36,16 +36,18 @@
     <article class="row">
         <section id="beer" class="col-md-6">
             <div class="row">
-                <a href="#"><img class="col-md-6 col-md-offset-4" src="../images/beer-icon.gif"></a>
+                <a href="#" class="answer"><img class="col-md-6 col-md-offset-4" src="../images/beer_awesome.jpg"></a>
             </div>
         </section>
 
-        <section id="cafe" class="col-md-6">
+        <section id="coffee" class="col-md-6">
             <div class="row">
-                <a href="#"><img class="col-md-6 col-md-offset-2" src="../images/coffee-icon.png"></a>
+                <a href="#" class="answer"><img class="col-md-6 col-md-offset-2" src="../images/coffee_awesome.png"></a>
             </div>
         </section>
     </article>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    <script src="../dist/js/jquery-ui-shake.min.js"></script>
 </body>
 </html>

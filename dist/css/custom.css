@@ -26,6 +26,9 @@ body {
     text-align: center;
     width: 100%;
 }
+#gameBoard #beer a img {
+    margin-top: -35px;
+}
 
 div#preload { display: none; }
 
