@@ -28,7 +28,7 @@
         <h1 id="question_text"></h1>
         <h2 id="question_hint"></h2>
     </header>
-
+<div id="map-canvas"/>
     <article class="versus-row">
         vs.
     </article>
@@ -46,14 +46,14 @@
             </div>
         </section>
     </article>
-     <div id="map-canvas"/>
+     
     <footer class="row">
         <div class="col-md-1">&nbsp;</div>
         <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png"></div>
         <div class="col-md-1 col-md-offset-7" id="elephant"><img src="../images/elephpant.png" style="margin-top: 60px;"></div>
         <div class="col-md-1">&nbsp;</div>
     </footer>
-
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="../dist/js/jquery-ui-shake.min.js"></script>
 	<script src="../script.js"></script>
