@@ -19,7 +19,7 @@ function initialize(lat,lng) {
 }
 
 function movePoint(hopLat, hopLng) {
-    map.panTo(hopLat, hopLng);
+    map.panTo(new google.maps.LatLng(-34.397, 150.644));
     
 }
 
