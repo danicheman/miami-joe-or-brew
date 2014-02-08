@@ -25,9 +25,8 @@ game.randomQuestionHint = function () {
 }
 
 game.sendAnswer = function(answer_data) {
-	$.post( "/api.php","type=answer&answer=coffee&question_index=2", function( data ) {
-		//just posted an answer, should get question now
-		//todo: take the question and update the dom
+	var query = $.param(answer_data);
+	$.post( "/api.php", query, function( data ) {
 		game.questionReceived(data);
 	});
 
@@ -42,8 +41,9 @@ game.startGame = function() {
 }
 
 game.answerClicked = function(e) {
+	var answer = $(this).attr('id');
 	var answer_data = {};
-	answer_data.answer = "beer";
+	answer_data.answer = answer;
 	answer_data.type = "answer";
 
 	game.sendAnswer(answer_data);
