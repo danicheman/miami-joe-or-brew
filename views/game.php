@@ -63,6 +63,6 @@
             game.startGame();
         });
     </script>
-
+    <?=!empty($js_include)?$js_include:''; ?>
 </body>
 </html>
