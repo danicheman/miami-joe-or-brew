@@ -1,4 +1,5 @@
 var map;
+var lastMarker;
 
 function initialize(lat,lng) {
   var myLatlng = new google.maps.LatLng(lat,lng);
@@ -11,7 +12,7 @@ function initialize(lat,lng) {
   map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
   
-   var marker = new google.maps.Marker({
+   lastMarker = new google.maps.Marker({
       position: myLatlng,
       map: map,
       title: 'What is this place?'
@@ -20,14 +21,14 @@ function initialize(lat,lng) {
 
 function movePoint(hopLat, hopLng) {
     var myLatlng = new google.maps.LatLng(hopLat,hopLng);
-    var marker = new google.maps.Marker({
+    /*var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
         title: 'What is this place?'
-        });
+        });*/
+    lastMarker.setPosition(myLatlng);
 
-    map.clearOverlays();
-    map.panTo(marker.getPosition());
+    map.panTo(lastMarker.getPosition());
     
 }
 
