@@ -25,3 +25,13 @@ body {
     text-align: center;
     width: 100%;
 }
+
+div#preload { display: none; }
+
+.jumbotron {
+    position: relative;
+}
+#explosion{
+    position:absolute;
+    
+}
