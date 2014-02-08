@@ -36,7 +36,14 @@
       <div class="jumbotron" style="text-align: center;">
 <? if (empty($jumbotron_message)): ?>
         <h1 style="margin-top: 0;">Brew vs. Brew</h1>
-        <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
+        <p class="lead">Welcome to the Sunshine PHP 2014  game Brew vs. Brew! Miami's favorite beer/coffee/bacon/zombie/ElePHPant online trivia game</p>
+	<p><ul>
+	  <li>Look at the map, and look at the hint, and try to guess if the Miami hotspot is a bar or a coffeehouse</li>
+	  <li>Click on the coffee image or beer image to make your decision accordingly.</li>
+	  <li>Look out! On the bottom of the screen the zombie is trying to catch the ElePHPant</li>
+	  <li>If you can guess 10 answers correctly, ElePHPant will be able to escape </li>
+	  <li>If you answer 3 questions incorrectly, ElePHPant will meet his dooooom!</li>
+	</ul></p>
 
         <br>
         <p><a href="?page=game" class="btn btn-lg btn-success" href="#" role="button" style="font-size: 3em; padding: .2em 1.5em">Play!</a></p>
