@@ -1,6 +1,5 @@
 $(document).ready(function(){
     animateIMG();
-    
 });
 
 function makeNewPosition(){
@@ -18,18 +17,18 @@ function makeNewPosition(){
 
 function animateIMG(){
     var newq = makeNewPosition();
-    $('#winner').animate({ top: newq[0], left: newq[1] }, function(){
+    $('#winner').animate({ top: newq[0], left: newq[1] }, 600, function(){
       animateIMG();        
     });
  
-    rotate($('#winner'), -75);   
+    rotate($('#winner'), Math.random() * -350);   
+
     /*
     $("#winner").rotate({
         duration: 200,
         angle: -75,
         animateTo:75
     });*/
-    
 }
 
 function rotate(object, degrees) {

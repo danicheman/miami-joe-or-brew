@@ -59,8 +59,7 @@ div#preload { display: none; }
 }
 
 #winner {
-    height:400px;
-    background-color:#ffffff;
+    height:281px;
     position:fixed;
 }
 
