@@ -33,8 +33,9 @@
         <h3 class="text-muted">Miami Brew vs. Brew</h3>
       </div>
     -->
-<<<<<<< HEAD
+
       <div class="jumbotron" style="text-align: center;">
+<? if (empty($jumbotron_message)): ?>
         <h1 style="margin-top: 0;">Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
 
@@ -46,6 +47,9 @@
             <div><img class="col-md-2 col-md-offset-4" src="images/beer-icon.gif"></div>
             <div><img class="col-md-2 col-md-offset-0" src="images/coffee_awesome.png"></div>
         </div>
+<? else:
+    echo $jumbotron_message;
+endif; ?>
       </div>
 
       <!--<div class="row marketing">
@@ -71,18 +75,6 @@
           <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>-->
-=======
-      <div class="jumbotron">
-        <h1>Brew vs. Brew</h1>
-        <? if(empty($jumbotron_message)):?>
-	<p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><a href="?page=game" class="btn btn-lg btn-success start" role="button">Start now!</a></p>
-        <? else:
-            echo $jumbotron_message;
-           endif; ?>
-      </div>
-
->>>>>>> e8d6144d95474188598f26301eb14d3107dfa8dd
 
       <!--<div class="footer">
         <p>&copy; Company 2014</p>
@@ -101,3 +93,4 @@
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
+
