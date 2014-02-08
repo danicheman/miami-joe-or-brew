@@ -47,12 +47,22 @@
         </section>
     </article>
 
+    <footer class="row">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-1 col-md-offset-0" id="zombie"><img src="../images/zombie.png"></div>
+        <div class="col-md-1 col-md-offset-7" id="elephant"><img src="../images/elephpant.png" style="margin-top: 60px;"></div>
+        <div class="col-md-1">&nbsp;</div>
+    </footer>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
     <script src="../dist/js/jquery-ui-shake.min.js"></script>
 	<script src="../script.js"></script>
 
-	<button class="start">Start Game</button>
-	<button class="send">Send Answer</button>
+    <script type="text/javascript">
+        $(function() {
+            game.startGame();
+        });
+    </script>
 
 </body>
 </html>
