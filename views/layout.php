@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,12 +33,23 @@
         <h3 class="text-muted">Miami Brew vs. Brew</h3>
       </div>
     -->
-      <div class="jumbotron">
-        <h1>Brew vs. Brew</h1>
+      <div class="jumbotron" style="text-align: center;">
+<? if (empty($jumbotron_message)): ?>
+        <h1 style="margin-top: 0;">Brew vs. Brew</h1>
         <p class="lead">Welcome to Brew vs. Brew!  Miami's favorite online trivia game.  Don't let the ZOMBIE eat the PHPELLEPHANT!</p>
-        <p><a href="?page=game" class="btn btn-lg btn-success start" href="#" role="button">Start now!</a></p>
-      </div>
 
+        <br>
+        <p><a href="?page=game" class="btn btn-lg btn-success" href="#" role="button" style="font-size: 3em; padding: .2em 1.5em">Play!</a></p>
+
+        <br>
+        <div class="row">
+            <div><img class="col-md-2 col-md-offset-4" src="images/beer-icon.gif"></div>
+            <div><img class="col-md-2 col-md-offset-0" src="images/coffee_awesome.png"></div>
+        </div>
+<? else:
+    echo $jumbotron_message;
+endif; ?>
+      </div>
 
       <!--<div class="row marketing">
         <div class="col-lg-6">
@@ -65,21 +75,21 @@
         </div>
       </div>-->
 
-      <div class="footer">
+      <!--<div class="footer">
         <p>&copy; Company 2014</p>
-      </div>
+      </div>-->
 
     </div> <!-- /container -->
-
-
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
 <script src="script.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <?=$js_include?>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
+
